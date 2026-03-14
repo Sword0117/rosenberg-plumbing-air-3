@@ -1,4 +1,6 @@
-const config = {
+import type { TemplateConfig } from "@/template/types";
+
+const config: TemplateConfig = {
   "business": {
     "name": "Rosenberg Plumbing & Air",
     "phone": "(210) 503-7388",
@@ -47,5 +49,5 @@ const config = {
   ],
   "about_text": "Rosenberg Plumbing & Air is a dedicated HVAC company in 4335 Vance Jackson Rd Suite 505, San Antonio, TX 78230, USA. Our experienced team is committed to providing top-quality services and ensuring every customer is completely satisfied with the results.",
   "testimonials": []
-} as const;
+};
 export default config;
