@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
 
   const STATS = [
     {
-      value: `${new Date().getFullYear() - parseInt(config.business.founded)}+`,
+      value: config.business.founded ? `${new Date().getFullYear() - parseInt(config.business.founded)}+` : "Many",
       label: "Years in Business",
     },
     { value: "5,000+", label: "Jobs Completed" },
