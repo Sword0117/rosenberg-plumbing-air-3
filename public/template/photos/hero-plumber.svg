@@ -1,0 +1,414 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C8E6F9;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#E8F4FD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5FAFE;stop-opacity:1" />
+    </linearGradient>
+    <!-- Ground gradient -->
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF7D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D52;stop-opacity:1" />
+    </linearGradient>
+    <!-- House wall gradient -->
+    <linearGradient id="houseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EAF1FB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D0E2F5;stop-opacity:1" />
+    </linearGradient>
+    <!-- Roof gradient -->
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A3E8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052CC;stop-opacity:1" />
+    </linearGradient>
+    <!-- Pipe gradient -->
+    <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1565C0;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#1E88E5;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#42A5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    <!-- Vertical pipe gradient -->
+    <linearGradient id="vpipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0D47A1;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#1565C0;stop-opacity:1" />
+      <stop offset="65%" style="stop-color:#42A5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D47A1;stop-opacity:1" />
+    </linearGradient>
+    <!-- Person body gradient -->
+    <linearGradient id="personGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0052CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003D99;stop-opacity:1" />
+    </linearGradient>
+    <!-- Water gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0288D1;stop-opacity:0.7" />
+    </linearGradient>
+    <!-- Tool gradient -->
+    <linearGradient id="toolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#78909C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#455A64;stop-opacity:1" />
+    </linearGradient>
+    <!-- Badge gradient -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#36B37E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E7E5A;stop-opacity:1" />
+    </linearGradient>
+    <!-- Van gradient -->
+    <linearGradient id="vanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D47A1;stop-opacity:1" />
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0052CC" flood-opacity="0.15"/>
+    </filter>
+    <filter id="softShadow" x="-5%" y="-5%" width="115%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <!-- Cloud shape -->
+    <radialGradient id="cloudGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#E8F4FD;stop-opacity:0.7" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" />
+
+  <!-- Sun -->
+  <circle cx="980" cy="110" r="55" fill="#FFD54F" opacity="0.85" />
+  <circle cx="980" cy="110" r="40" fill="#FFEE58" opacity="0.7" />
+  <!-- Sun rays -->
+  <g stroke="#FFD54F" stroke-width="3" opacity="0.5">
+    <line x1="980" y1="40" x2="980" y2="20" />
+    <line x1="980" y1="180" x2="980" y2="200" />
+    <line x1="910" y1="110" x2="890" y2="110" />
+    <line x1="1050" y1="110" x2="1070" y2="110" />
+    <line x1="931" y1="61" x2="917" y2="47" />
+    <line x1="1029" y1="159" x2="1043" y2="173" />
+    <line x1="1029" y1="61" x2="1043" y2="47" />
+    <line x1="931" y1="159" x2="917" y2="173" />
+  </g>
+
+  <!-- Clouds -->
+  <g opacity="0.9">
+    <ellipse cx="150" cy="100" rx="70" ry="28" fill="url(#cloudGrad)" />
+    <ellipse cx="120" cy="110" rx="50" ry="22" fill="url(#cloudGrad)" />
+    <ellipse cx="195" cy="108" rx="55" ry="24" fill="url(#cloudGrad)" />
+  </g>
+  <g opacity="0.75">
+    <ellipse cx="500" cy="70" rx="55" ry="22" fill="url(#cloudGrad)" />
+    <ellipse cx="475" cy="78" rx="40" ry="18" fill="url(#cloudGrad)" />
+    <ellipse cx="538" cy="76" rx="45" ry="19" fill="url(#cloudGrad)" />
+  </g>
+  <g opacity="0.6">
+    <ellipse cx="760" cy="85" rx="45" ry="18" fill="url(#cloudGrad)" />
+    <ellipse cx="740" cy="92" rx="35" ry="15" fill="url(#cloudGrad)" />
+    <ellipse cx="788" cy="90" rx="38" ry="16" fill="url(#cloudGrad)" />
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="610" width="1200" height="190" fill="url(#groundGrad)" />
+  <!-- Sidewalk / path -->
+  <rect x="0" y="610" width="1200" height="18" fill="#8BC34A" opacity="0.6" />
+  <!-- Driveway -->
+  <polygon points="650,610 800,610 780,800 630,800" fill="#CFD8DC" />
+  <polygon points="660,610 790,610 770,800 640,800" fill="#ECEFF1" opacity="0.4" />
+
+  <!-- Background trees (left) -->
+  <rect x="60" y="490" width="18" height="130" fill="#5D4037" />
+  <ellipse cx="69" cy="470" rx="45" ry="55" fill="#2E7D32" />
+  <ellipse cx="69" cy="455" rx="35" ry="42" fill="#388E3C" />
+
+  <rect x="130" y="510" width="14" height="110" fill="#5D4037" />
+  <ellipse cx="137" cy="495" rx="36" ry="44" fill="#1B5E20" opacity="0.9" />
+  <ellipse cx="137" cy="482" rx="28" ry="34" fill="#2E7D32" />
+
+  <!-- Background trees (right) -->
+  <rect x="1090" y="500" width="16" height="120" fill="#5D4037" />
+  <ellipse cx="1098" cy="480" rx="40" ry="50" fill="#2E7D32" />
+  <ellipse cx="1098" cy="466" rx="30" ry="38" fill="#388E3C" />
+
+  <rect x="1140" y="515" width="14" height="105" fill="#5D4037" />
+  <ellipse cx="1147" cy="500" rx="34" ry="42" fill="#1B5E20" opacity="0.85" />
+
+  <!-- ===== HOUSE ===== -->
+  <!-- House foundation -->
+  <rect x="260" y="600" width="520" height="20" fill="#90A4AE" />
+
+  <!-- House main body -->
+  <rect x="275" y="380" width="490" height="235" fill="url(#houseGrad)" filter="url(#softShadow)" />
+
+  <!-- Roof -->
+  <polygon points="240,385 520,200 800,385" fill="url(#roofGrad)" filter="url(#softShadow)" />
+  <!-- Roof ridge detail -->
+  <polygon points="240,385 520,200 800,385 790,385 520,215 250,385" fill="#1A3E8A" opacity="0.4" />
+  <!-- Chimney -->
+  <rect x="600" y="220" width="45" height="90" fill="#B0BEC5" />
+  <rect x="596" y="215" width="53" height="12" fill="#90A4AE" />
+  <!-- Chimney smoke -->
+  <ellipse cx="622" cy="198" rx="12" ry="18" fill="#ECEFF1" opacity="0.5" />
+  <ellipse cx="618" cy="178" rx="9" ry="14" fill="#ECEFF1" opacity="0.35" />
+  <ellipse cx="625" cy="160" rx="7" ry="11" fill="#ECEFF1" opacity="0.2" />
+
+  <!-- Front door -->
+  <rect x="470" y="470" width="100" height="145" fill="#0D47A1" rx="4" />
+  <rect x="475" y="475" width="90" height="133" fill="#1565C0" rx="2" />
+  <!-- Door window -->
+  <rect x="495" y="485" width="50" height="40" fill="#90CAF9" rx="3" />
+  <!-- Door knob -->
+  <circle cx="546" cy="555" r="5" fill="#FFD54F" />
+  <!-- Door panels -->
+  <rect x="485" y="535" width="32" height="35" fill="#1A3E8A" rx="2" />
+  <rect x="523" y="535" width="32" height="35" fill="#1A3E8A" rx="2" />
+
+  <!-- Windows left -->
+  <rect x="300" y="430" width="120" height="100" fill="#B3D9F5" rx="4" filter="url(#softShadow)" />
+  <rect x="305" y="435" width="110" height="90" fill="#E3F2FD" rx="2" opacity="0.7" />
+  <!-- Window cross -->
+  <line x1="360" y1="435" x2="360" y2="525" stroke="#90CAF9" stroke-width="3" />
+  <line x1="305" y1="480" x2="415" y2="480" stroke="#90CAF9" stroke-width="3" />
+  <!-- Window frame -->
+  <rect x="300" y="430" width="120" height="100" fill="none" stroke="#78909C" stroke-width="3" rx="4" />
+  <!-- Window sill -->
+  <rect x="295" y="528" width="130" height="8" fill="#90A4AE" rx="2" />
+
+  <!-- Windows right -->
+  <rect x="620" y="430" width="120" height="100" fill="#B3D9F5" rx="4" filter="url(#softShadow)" />
+  <rect x="625" y="435" width="110" height="90" fill="#E3F2FD" rx="2" opacity="0.7" />
+  <line x1="680" y1="435" x2="680" y2="525" stroke="#90CAF9" stroke-width="3" />
+  <line x1="625" y1="480" x2="735" y2="480" stroke="#90CAF9" stroke-width="3" />
+  <rect x="620" y="430" width="120" height="100" fill="none" stroke="#78909C" stroke-width="3" rx="4" />
+  <rect x="615" y="528" width="130" height="8" fill="#90A4AE" rx="2" />
+
+  <!-- Porch -->
+  <rect x="420" y="595" width="210" height="18" fill="#90A4AE" rx="2" />
+  <!-- Porch pillars -->
+  <rect x="430" y="490" width="14" height="108" fill="#CFD8DC" rx="2" />
+  <rect x="606" y="490" width="14" height="108" fill="#CFD8DC" rx="2" />
+
+  <!-- Bushes by house -->
+  <ellipse cx="285" cy="608" rx="35" ry="22" fill="#388E3C" />
+  <ellipse cx="755" cy="608" rx="35" ry="22" fill="#388E3C" />
+  <ellipse cx="265" cy="612" rx="25" ry="16" fill="#43A047" />
+  <ellipse cx="775" cy="612" rx="25" ry="16" fill="#43A047" />
+
+  <!-- ===== SERVICE VAN (far right background) ===== -->
+  <g filter="url(#softShadow)" transform="translate(870, 520)">
+    <!-- Van body -->
+    <rect x="0" y="30" width="200" height="90" fill="url(#vanGrad)" rx="6" />
+    <!-- Van cab -->
+    <polygon points="130,30 165,0 200,0 200,30" fill="#0D47A1" />
+    <rect x="130" y="0" width="70" height="32" fill="#1565C0" rx="4" />
+    <!-- Windshield -->
+    <rect x="140" y="5" width="55" height="24" fill="#90CAF9" rx="3" opacity="0.8" />
+    <!-- Side windows -->
+    <rect x="8" y="38" width="60" height="35" fill="#90CAF9" rx="3" opacity="0.7" />
+    <rect x="75" y="38" width="50" height="35" fill="#90CAF9" rx="3" opacity="0.7" />
+    <!-- Wheels -->
+    <circle cx="40" cy="120" r="22" fill="#263238" />
+    <circle cx="40" cy="120" r="13" fill="#455A64" />
+    <circle cx="40" cy="120" r="6" fill="#78909C" />
+    <circle cx="168" cy="120" r="22" fill="#263238" />
+    <circle cx="168" cy="120" r="13" fill="#455A64" />
+    <circle cx="168" cy="120" r="6" fill="#78909C" />
+    <!-- Van logo area -->
+    <rect x="20" y="78" width="100" height="28" fill="#0052CC" rx="3" opacity="0.8" />
+    <!-- Headlight -->
+    <rect x="192" y="35" width="8" height="14" fill="#FFE082" rx="2" />
+    <!-- Stripe -->
+    <rect x="0" y="68" width="200" height="5" fill="#FF5630" opacity="0.8" />
+    <!-- Van roof rack with pipes -->
+    <rect x="5" y="-8" width="125" height="8" fill="#90A4AE" rx="2" />
+    <rect x="12" y="-14" width="6" height="14" fill="#78909C" />
+    <rect x="112" y="-14" width="6" height="14" fill="#78909C" />
+    <rect x="15" y="-16" width="100" height="6" fill="url(#pipeGrad)" rx="3" />
+    <rect x="15" y="-10" width="100" height="4" fill="url(#pipeGrad)" rx="2" />
+  </g>
+
+  <!-- ===== PLUMBER FIGURE ===== -->
+  <g transform="translate(158, 370)">
+    <!-- Shadow under person -->
+    <ellipse cx="58" cy="242" rx="38" ry="8" fill="#000" opacity="0.15" />
+
+    <!-- Legs -->
+    <rect x="32" y="175" width="22" height="70" fill="#1A237E" rx="4" />
+    <rect x="58" y="175" width="22" height="70" fill="#1A237E" rx="4" />
+    <!-- Boots -->
+    <rect x="28" y="238" width="28" height="16" fill="#37474F" rx="3" />
+    <rect x="56" y="238" width="26" height="16" fill="#37474F" rx="3" />
+
+    <!-- Body/Uniform -->
+    <rect x="24" y="95" width="70" height="90" fill="url(#personGrad)" rx="8" />
+    <!-- Uniform pocket -->
+    <rect x="30" y="110" width="22" height="18" fill="#003D99" rx="2" />
+    <!-- Uniform logo patch -->
+    <rect x="58" y="108" width="26" height="18" fill="#36B37E" rx="3" />
+    <!-- Belt -->
+    <rect x="22" y="172" width="73" height="8" fill="#212121" rx="2" />
+    <!-- Belt buckle -->
+    <rect x="51" y="171" width="15" height="10" fill="#FFD54F" rx="1" />
+
+    <!-- Arms -->
+    <!-- Right arm (holding wrench, extended forward) -->
+    <rect x="94" y="98" width="18" height="55" fill="#0052CC" rx="6" transform="rotate(25, 103, 120)" />
+    <!-- Left arm (reaching toward pipe) -->
+    <rect x="-14" y="100" width="18" height="50" fill="#0052CC" rx="6" transform="rotate(-20, -5, 120)" />
+
+    <!-- Hands -->
+    <circle cx="120" cy="148" r="12" fill="#FFCCBC" />
+    <circle cx="-12" cy="145" r="12" fill="#FFCCBC" />
+
+    <!-- Head -->
+    <circle cx="59" cy="65" r="32" fill="#FFCCBC" />
+    <!-- Hard hat -->
+    <ellipse cx="59" cy="43" rx="36" ry="12" fill="#0052CC" />
+    <rect x="30" y="36" width="58" height="18" fill="#0052CC" rx="4" />
+    <ellipse cx="59" cy="36" rx="30" ry="9" fill="#1565C0" />
+    <!-- Hat brim -->
+    <rect x="24" y="50" width="70" height="6" fill="#0052CC" rx="3" />
+    <!-- Face features -->
+    <circle cx="50" cy="68" r="4" fill="#6D4C41" />
+    <circle cx="68" cy="68" r="4" fill="#6D4C41" />
+    <!-- Smile -->
+    <path d="M48 80 Q59 90 70 80" stroke="#6D4C41" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- ===== LARGE WRENCH (held by plumber, foreground) ===== -->
+  <g transform="translate(270, 470) rotate(-30)" filter="url(#softShadow)">
+    <!-- Wrench handle -->
+    <rect x="0" y="0" width="18" height="120" fill="url(#toolGrad)" rx="5" />
+    <!-- Wrench head -->
+    <rect x="-12" y="-28" width="42" height="38" fill="url(#toolGrad)" rx="4" />
+    <rect x="-4" y="-10" width="26" height="18" fill="#37474F" rx="2" />
+    <!-- Head detail -->
+    <ellipse cx="9" cy="-9" rx="14" ry="8" fill="#546E7A" />
+    <ellipse cx="9" cy="10" rx="10" ry="6" fill="#546E7A" />
+    <!-- Highlight -->
+    <rect x="5" y="5" width="5" height="90" fill="#90A4AE" rx="2" opacity="0.5" />
+  </g>
+
+  <!-- ===== PIPES SYSTEM (decorative, flowing through scene) ===== -->
+  <!-- Main horizontal pipe (left side) -->
+  <g filter="url(#softShadow)">
+    <rect x="50" y="560" width="220" height="22" fill="url(#pipeGrad)" rx="11" />
+    <!-- Pipe connector/elbow -->
+    <rect x="50" y="540" width="22" height="42" fill="url(#vpipeGrad)" rx="11" />
+    <circle cx="61" cy="540" r="15" fill="#1565C0" />
+    <circle cx="61" cy="540" r="8" fill="#42A5F5" opacity="0.6" />
+    <!-- Vertical pipe going up from elbow -->
+    <rect x="50" y="450" width="22" height="100" fill="url(#vpipeGrad)" rx="11" />
+    <!-- Pipe connector to wall -->
+    <rect x="50" y="448" width="40" height="22" fill="url(#pipeGrad)" rx="11" />
+    <!-- Pipe support bracket -->
+    <rect x="85" y="550" width="10" height="25" fill="#546E7A" rx="3" />
+    <rect x="80" y="548" width="20" height="6" fill="#78909C" rx="2" />
+    <!-- Pipe end cap right -->
+    <circle cx="270" cy="571" r="14" fill="#0D47A1" />
+    <circle cx="270" cy="571" r="8" fill="#1565C0" />
+    <!-- Pipe bolts -->
+    <circle cx="100" cy="571" r="4" fill="#90A4AE" />
+    <circle cx="150" cy="571" r="4" fill="#90A4AE" />
+    <circle cx="200" cy="571" r="4" fill="#90A4AE" />
+  </g>
+
+  <!-- Water droplets flowing from pipe -->
+  <g fill="url(#waterGrad)" opacity="0.85">
+    <ellipse cx="270" cy="590" rx="5" ry="7" />
+    <ellipse cx="260" cy="605" rx="4" ry="6" />
+    <ellipse cx="275" cy="618" rx="3" ry="5" />
+    <ellipse cx="255" cy="625" rx="4" ry="6" />
+  </g>
+
+  <!-- Pipe system (right side, going into house) -->
+  <g filter="url(#softShadow)">
+    <rect x="830" y="555" width="180" height="20" fill="url(#pipeGrad)" rx="10" />
+    <!-- Elbow up -->
+    <rect x="1008" y="490" width="20" height="85" fill="url(#vpipeGrad)" rx="10" />
+    <circle cx="1018" cy="555" r="14" fill="#1565C0" />
+    <circle cx="1018" cy="555" r="7" fill="#42A5F5" opacity="0.5" />
+    <!-- Pipe bolts -->
+    <circle cx="870" cy="565" r="4" fill="#90A4AE" />
+    <circle cx="940" cy="565" r="4" fill="#90A4AE" />
+    <circle cx="1000" cy="565" r="4" fill="#90A4AE" />
+  </g>
+
+  <!-- ===== WATER HEATER / EQUIPMENT (left foreground) ===== -->
+  <g transform="translate(50, 490)" filter="url(#softShadow)">
+    <!-- Tank body -->
+    <rect x="0" y="0" width="55" height="110" fill="#90A4AE" rx="8" />
+    <ellipse cx="27" cy="0" rx="27" ry="10" fill="#B0BEC5" />
+    <!-- Tank stripes/detail -->
+    <rect x="5" y="25" width="45" height="6" fill="#78909C" rx="2" />
+    <rect x="5" y="45" width="45" height="6" fill="#78909C" rx="2" />
+    <!-- Blue label -->
+    <rect x="5" y="58" width="45" height="28" fill="#1565C0" rx="3" />
+    <!-- Temperature indicator -->
+    <circle cx="27" cy="90" r="10" fill="#263238" />
+    <circle cx="27" cy="90" r="6" fill="#FF5630" />
+    <!-- Pipe connection top -->
+    <rect x="18" y="-18" width="10" height="22" fill="url(#vpipeGrad)" rx="5" />
+    <rect x="28" y="-12" width="30" height="10" fill="url(#pipeGrad)" rx="5" />
+  </g>
+
+  <!-- ===== CERTIFICATION BADGES (floating, right side) ===== -->
+  <g transform="translate(1020, 200)" filter="url(#shadow)">
+    <!-- Badge 1: Licensed -->
+    <rect x="0" y="0" width="130" height="70" fill="url(#badgeGrad)" rx="10" />
+    <text x="65" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">LICENSED &amp;</text>
+    <text x="65" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">INSURED</text>
+    <text x="65" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="white">✓</text>
+    <!-- Badge 2: 24/7 -->
+    <rect x="0" y="82" width="130" height="70" fill="#FF5630" rx="10" />
+    <text x="65" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">24/7</text>
+    <text x="65" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">EMERGENCY</text>
+    <text x="65" y="141" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">SERVICE</text>
+    <!-- Badge 3: Years -->
+    <rect x="0" y="164" width="130" height="70" fill="#0052CC" rx="10" />
+    <text x="65" y="189" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">SERVING THE</text>
+    <text x="65" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">COMMUNITY</text>
+    <text x="65" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">SINCE 2009</text>
+  </g>
+
+  <!-- ===== FOREGROUND ELEMENTS ===== -->
+  <!-- Toolbox (lower left) -->
+  <g transform="translate(28, 610)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="80" height="50" fill="#1565C0" rx="5" />
+    <rect x="0" y="0" width="80" height="14" fill="#1976D2" rx="5" />
+    <rect x="25" y="-8" width="30" height="12" fill="#1976D2" rx="3" />
+    <rect x="5" y="18" width="70" height="4" fill="#0D47A1" rx="1" />
+    <circle cx="40" cy="7" r="3" fill="#90CAF9" />
+    <!-- Tools sticking out -->
+    <rect x="12" y="-14" width="6" height="22" fill="url(#toolGrad)" rx="2" />
+    <rect x="28" y="-12" width="5" height="18" fill="#FF5630" rx="2" />
+    <rect x="48" y="-16" width="6" height="24" fill="url(#toolGrad)" rx="2" />
+  </g>
+
+  <!-- Small water droplets scattered (decorative) -->
+  <g fill="#4FC3F7" opacity="0.6">
+    <ellipse cx="350" cy="300" rx="6" ry="9" />
+    <ellipse cx="370" cy="315" rx="4" ry="6" />
+    <ellipse cx="335" cy="320" rx="5" ry="8" />
+    <ellipse cx="900" cy="450" rx="5" ry="8" />
+    <ellipse cx="916" cy="464" rx="4" ry="6" />
+    <ellipse cx="888" cy="460" rx="4" ry="7" />
+  </g>
+
+  <!-- Subtle foreground grass tufts -->
+  <g fill="#43A047" opacity="0.7">
+    <ellipse cx="220" cy="614" rx="20" ry="8" />
+    <ellipse cx="850" cy="614" rx="18" ry="7" />
+    <ellipse cx="950" cy="616" rx="15" ry="6" />
+    <ellipse cx="100" cy="616" rx="16" ry="7" />
+  </g>
+
+  <!-- ===== SCENE LABEL (subtle) ===== -->
+  <!-- Pathway stepping stones -->
+  <ellipse cx="690" cy="660" rx="28" ry="12" fill="#B0BEC5" opacity="0.7" />
+  <ellipse cx="710" cy="690" rx="25" ry="11" fill="#B0BEC5" opacity="0.6" />
+  <ellipse cx="700" cy="720" rx="27" ry="12" fill="#B0BEC5" opacity="0.65" />
+  <ellipse cx="715" cy="750" rx="24" ry="10" fill="#B0BEC5" opacity="0.6" />
+
+</svg>

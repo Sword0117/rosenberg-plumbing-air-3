@@ -1,0 +1,177 @@
+/* ===== CTA BANNER ===== */
+.banner {
+  position: relative;
+  background: linear-gradient(
+    120deg,
+    #0284c7 0%,
+    var(--color-accent) 35%,
+    #1e40af 100%
+  );
+  padding: 5.5rem 2rem;
+  overflow: hidden;
+}
+
+/* Subtle dot pattern overlay for depth */
+.patternOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.headline {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.subtext {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.65;
+  max-width: 500px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.phoneButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  color: var(--color-accent);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 18px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  min-height: 64px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.phoneButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  background: #f0f9ff;
+}
+
+.phoneButton:active {
+  transform: translateY(0);
+}
+
+.phoneButton:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.phoneIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.subNote {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  text-align: center;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .banner {
+    padding: 4rem 1.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .subtext {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .phoneButton {
+    font-size: 1.125rem;
+    padding: 16px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phoneButton {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 16px 24px;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .phoneButton {
+    transition: none;
+  }
+}

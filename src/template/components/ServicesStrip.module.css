@@ -1,0 +1,232 @@
+/* ===== SERVICES SECTION ===== */
+.section {
+  background-color: var(--color-background);
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== SECTION HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+}
+
+.heading {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.headingUnderline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), #38bdf8);
+  border-radius: 4px;
+  margin: 0 auto 1.25rem;
+}
+
+.subheading {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  color: var(--color-secondary);
+  margin: 0 auto;
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+/* ===== SERVICE CARD ===== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: cardAppear 0.5s calc(var(--card-index, 0) * 0.1s) ease both;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Icon badge */
+.iconBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: var(--color-accent);
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover .iconBadge {
+  background: linear-gradient(135deg, var(--color-accent), #0284c7);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.cardTitle {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.625rem;
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin: 0 0 1.5rem;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: gap 0.2s ease, color 0.2s ease;
+  margin-top: auto;
+}
+
+.cardLink:hover {
+  gap: 10px;
+  color: #0284c7;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.cardLinkArrow {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.cardLink:hover .cardLinkArrow {
+  transform: translateX(2px);
+}
+
+/* ===== VIEW ALL ===== */
+.viewAll {
+  text-align: center;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: 12px 28px;
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.viewAllLink:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.viewAllLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .iconBadge,
+  .cardLink,
+  .cardLinkArrow,
+  .viewAllLink {
+    transition: none;
+    animation: none;
+  }
+}

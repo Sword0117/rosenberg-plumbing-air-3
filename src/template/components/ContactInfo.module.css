@@ -1,0 +1,188 @@
+.card {
+  background: var(--color-primary);
+  border-radius: 16px;
+  padding: 40px 32px;
+  height: fit-content;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.3), 0 4px 8px rgba(15, 23, 42, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture ring */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  bottom: -160px;
+  right: -120px;
+  pointer-events: none;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  bottom: -100px;
+  right: -60px;
+  pointer-events: none;
+}
+
+.companyName {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.tagline {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 36px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Contact item list ── */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.itemLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1;
+}
+
+.itemValue {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+a.itemValue {
+  cursor: pointer;
+  transition: color 0.15s ease;
+  border-bottom: 1px solid transparent;
+}
+
+a.itemValue:hover {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+a.itemValue:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Emergency highlight box ── */
+.emergencyBox {
+  position: relative;
+  z-index: 1;
+  margin-top: 36px;
+  background: var(--color-accent);
+  border-radius: 10px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emergencyLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.emergencyPhone {
+  display: block;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: -0.3px;
+  transition: opacity 0.15s ease;
+}
+
+.emergencyPhone:hover {
+  opacity: 0.88;
+}
+
+.emergencyPhone:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.itemValue,
+  .emergencyPhone {
+    transition: none;
+  }
+}

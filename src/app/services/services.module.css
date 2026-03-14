@@ -1,0 +1,81 @@
+.page {
+  background-color: var(--color-background);
+}
+
+/* ── Section shared ── */
+.section {
+  padding: 80px 24px;
+}
+
+.section + .section {
+  padding-top: 0;
+}
+
+.sectionInner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* ── Section heading with accent underline ── */
+.sectionHeading {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.sectionHeadingAccent {
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+.sectionSubtext {
+  font-size: 1.0625rem;
+  color: var(--color-secondary);
+  line-height: 1.65;
+  margin: 0 0 40px;
+  max-width: 560px;
+}
+
+/* ── Card grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── Divider between sections ── */
+.divider {
+  max-width: 1160px;
+  margin: 0 auto 64px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(15, 23, 42, 0.12),
+    transparent
+  );
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 56px 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

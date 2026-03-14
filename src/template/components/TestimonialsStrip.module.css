@@ -1,0 +1,166 @@
+/* ===== TESTIMONIALS SECTION ===== */
+.section {
+  background: var(--color-background);
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+}
+
+.heading {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.headingUnderline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), #38bdf8);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+/* ===== TESTIMONIAL CARD ===== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Decorative large quote mark */
+.quoteMark {
+  color: #e2e8f0;
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Quote text */
+.quote {
+  flex: 1;
+  margin: 0 0 1.5rem;
+}
+
+.quote p {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Bottom section */
+.cardBottom {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+/* Stars */
+.stars {
+  color: var(--badge-gold);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Author block */
+.authorBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.author {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--security-green);
+  background: rgba(5, 150, 105, 0.08);
+  padding: 3px 10px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

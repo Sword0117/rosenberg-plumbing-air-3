@@ -1,0 +1,39 @@
+.page {
+  background-color: var(--color-background);
+}
+
+.contactSection {
+  padding: 80px 24px 96px;
+}
+
+.inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Sticky sidebar */
+.infoColumn {
+  position: sticky;
+  top: 96px;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .infoColumn {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .contactSection {
+    padding: 56px 16px 72px;
+  }
+}
