@@ -56,6 +56,7 @@ export interface TemplateConfig {
     headline: string;
     subheadline: string;
     owner_photo?: string;
+    tagline?: string;
   };
   services: ServiceItem[];
   palette: PaletteConfig;
