@@ -59,10 +59,10 @@ export default function NavBar() {
       >
         <div className={styles.inner}>
           {/* Logo */}
-          {config.logo ? (
+          {(typeof config.logo === "string" ? config.logo : config.logo?.src) ? (
             <Link href={basePath} className={styles.logoLink} onClick={close}>
               <Image
-                src={config.logo}
+                src={typeof config.logo === "string" ? config.logo : config.logo?.src || ""}
                 alt={config.business.name}
                 width={160}
                 height={40}
