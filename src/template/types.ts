@@ -8,7 +8,6 @@ export interface PaletteConfig {
 
 export interface ServiceItem {
   name: string;
-  /** Icon name recognised by `getIcon()` in components/icons.tsx (e.g. "wrench", "droplet"). */
   icon: string;
   description: string;
 }
@@ -32,7 +31,7 @@ export interface EmailConfig {
 export interface PaymentsConfig {
   provider: "stripe";
   payment_link?: string;
-  publishable_key?: string;  // Phase 2: for embedded checkout
+  publishable_key?: string;
 }
 
 export interface IntegrationsConfig {
@@ -44,13 +43,14 @@ export interface IntegrationsConfig {
 export interface TemplateConfig {
   business: {
     name: string;
-    tagline: string;
+    tagline?: string;
     phone: string;
-    email: string;
+    email?: string;
     address: string;
-    founded: string;
+    founded?: string;
+    industry?: string;
   };
-  industry: "plumbing" | "electrical" | "hvac" | "landscaping" | "cleaning" | "handyman" | string;
+  industry?: string;
   hero: {
     photo: string;
     headline: string;
@@ -59,7 +59,7 @@ export interface TemplateConfig {
   };
   services: ServiceItem[];
   palette: PaletteConfig;
-  logo: string;
+  logo: string | { type: string; src: string };
   about_text?: string;
   testimonials?: TestimonialItem[];
   integrations?: IntegrationsConfig;

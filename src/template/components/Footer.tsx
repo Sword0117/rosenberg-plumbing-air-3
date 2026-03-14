@@ -26,10 +26,10 @@ export default function Footer() {
             </span>
             <span className={styles.logoName}>{config.business.name}</span>
           </div>
-          <p className={styles.tagline}>{config.business.tagline}</p>
+          <p className={styles.tagline}>{config.business.tagline || "Your trusted local professionals"}</p>
           <p className={styles.description}>
             Serving the Austin area with honest, reliable plumbing since{" "}
-            {config.business.founded}.
+            {config.business.founded || ""}.
           </p>
         </div>
 
@@ -67,10 +67,10 @@ export default function Footer() {
                 {getIcon("envelope")}
               </span>
               <a
-                href={`mailto:${config.business.email}`}
+                href={config.business.email ? `mailto:${config.business.email || "Contact us"}` : "#"}
                 className={styles.contactLink}
               >
-                {config.business.email}
+                {config.business.email || "Contact us"}
               </a>
             </li>
             <li className={styles.contactItem}>

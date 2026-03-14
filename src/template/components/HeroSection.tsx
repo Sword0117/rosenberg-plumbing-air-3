@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div className={styles.content}>
           <p className={styles.eyebrow}>
             <span className={styles.eyebrowDot} aria-hidden="true" />
-            Serving Austin Since {config.business.founded}
+            {config.business.founded ? `Serving you since ${config.business.founded}` : config.business.address}
           </p>
 
           <h1 className={styles.headline}>{config.hero.headline}</h1>

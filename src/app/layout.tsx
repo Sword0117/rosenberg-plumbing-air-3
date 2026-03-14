@@ -21,7 +21,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: config.business.name,
-  description: config.business.tagline,
+  description: config.business.tagline || config.business.name,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
