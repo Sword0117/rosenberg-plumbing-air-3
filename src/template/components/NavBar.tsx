@@ -59,7 +59,7 @@ export default function NavBar() {
       >
         <div className={styles.inner}>
           {/* Logo */}
-          {(typeof config.logo === "string" ? config.logo : config.logo?.src) ? (
+          {(() => { const logoSrc = typeof config.logo === "string" ? config.logo : config.logo?.src; return logoSrc && !logoSrc.includes("nitro-empty"); })() ? (
             <Link href={basePath} className={styles.logoLink} onClick={close}>
               <Image
                 src={typeof config.logo === "string" ? config.logo : config.logo?.src || ""}
